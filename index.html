@@ -10,25 +10,69 @@
 </head>
 
 <body>
-  <div class="scene">
-    <div class="camera">
-      <div class="room">
-        <div class="wall wall-front"></div>
-        <div class="wall wall-back"></div>
-        <div class="wall wall-left"></div>
-        <div class="wall wall-right"></div>
-        <div class="floor"></div>
-        <div class="ceiling"></div>
-
-        <div class="cube">
-          <div class="face front"></div>
-          <div class="face back"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-          <div class="face top"></div>
-          <div class="face bottom"></div>
+  <div class="widget-root">
+    <div class="scene" id="scene">
+      <div class="camera">
+        <div class="room">
+          <div class="wall wall-front"></div>
+          <div class="wall wall-back"></div>
+          <div class="wall wall-left"></div>
+          <div class="wall wall-right"></div>
+          <div class="floor"></div>
+          <div class="ceiling"></div>
+          <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
         </div>
       </div>
+      <div class="crt-scanlines"></div>
+      <div class="crt-rgb"></div>
+      <div class="glitch-tear" id="tear1"></div>
+      <div class="glitch-tear" id="tear2"></div>
+      <div class="glitch-tear" id="tear3"></div>
+      <canvas 
+        class="glitch-noise" 
+        id="noiseCanvas" 
+        width="500" 
+        height="340"
+      ></canvas>
+      <div class="glitch-blackout" id="blackout"></div>
+      <div class="glitch-red-band" id="redBand"></div>
+    </div>
+    <div class="status-bar" id="statusBar">
+      SIGNAL NOMINAL
+    </div>
+    <div class="controls">
+      <button 
+        class="ctrl-btn" 
+        id="triggerBtn" 
+        onclick="triggerGlitch(true)"
+      >
+        GLITCH NOW
+      </button>
+      <span class="ctrl-label">
+        INTENSITY
+      </span>
+      <input 
+        type="range" 
+        class="ctrl-slider" 
+        id="intensitySlider" 
+        min="1" 
+        max="10" 
+        value="5" 
+        step="1"
+        >
+      <span class="ctrl-label" id="intensityVal">
+        5
+      </span>
+      <button class="ctrl-btn" id="autoBtn">
+        AUTO: ON
+      </button>
     </div>
   </div>
   <script src="./script.js"></script>
