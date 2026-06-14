@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +29,11 @@ body {
   height: 340px;
   perspective: 1200px;
   transform: scale(1.02);
-  filter: brightness(1.2) contrast(1.4) saturate(1.2) drop-shadow(0 0 10px #00ff00);
+  filter: 
+    brightness(1.2) 
+    contrast(1.4) 
+    saturate(1.2) 
+    drop-shadow(0 0 10px #00ff00);
   position: relative;
 }
 
@@ -88,7 +94,11 @@ body {
 .floor {
   height: 500px;
   transform: rotateX(90deg) translateZ(170px);
-  background: repeating-linear-gradient(45deg, #004400 0 20px, #002200 20px 40px);
+  background: repeating-linear-gradient(
+    45deg, 
+    #004400 0 20px, 
+    #002200 20px 40px
+  );
 }
 
 .ceiling {
@@ -168,7 +178,13 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 10;
-  background: repeating-linear-gradient(to bottom, rgba(0, 255, 0, 0.06) 0px, rgba(0, 255, 0, 0.06) 2px, rgba(0, 0, 0, 0.12) 3px, rgba(0, 0, 0, 0.12) 4px);
+  background: repeating-linear-gradient(
+    to bottom, 
+    rgba(0, 255, 0, 0.06) 0px, 
+    rgba(0, 255, 0, 0.06) 2px, 
+    rgba(0, 0, 0, 0.12) 3px, 
+    rgba(0, 0, 0, 0.12) 4px
+  );
   mix-blend-mode: screen;
   opacity: 0.6;
 }
@@ -179,7 +195,13 @@ body {
   pointer-events: none;
   z-index: 11;
   mix-blend-mode: screen;
-  background: linear-gradient(to right, rgba(0, 255, 0, 0.05) 0%, rgba(0, 255, 0, 0.05) 33%, rgba(255, 0, 0, 0.05) 66%, rgba(0, 0, 255, 0.05) 100%);
+  background: linear-gradient(
+    to right, 
+    rgba(0, 255, 0, 0.05) 0%, 
+    rgba(0, 255, 0, 0.05) 33%, 
+    rgba(255, 0, 0, 0.05) 66%, 
+    rgba(0, 0, 255, 0.05) 100%
+  );
   animation: rgbShift 0.2s infinite alternate;
 }
 
@@ -273,7 +295,13 @@ body {
 }
 
 .scene.glitch-chromatic {
-  filter: brightness(1.2) contrast(1.4) saturate(1.2) drop-shadow(0 0 10px #00ff00) drop-shadow(-3px 0 0 rgba(255, 0, 0, 0.6)) drop-shadow(3px 0 0 rgba(0, 0, 255, 0.6));
+  filter: 
+    brightness(1.2) 
+    contrast(1.4) 
+    saturate(1.2) 
+    drop-shadow(0 0 10px #00ff00) 
+    drop-shadow(-3px 0 0 rgba(255, 0, 0, 0.6)) 
+    drop-shadow(3px 0 0 rgba(0, 0, 255, 0.6));
 }
 
 .controls {
@@ -289,7 +317,7 @@ body {
   background: transparent;
   border: 1px solid #00ff00;
   color: #00ff00;
-  font-family: 'Courier New', monospace;
+  font-family: 'VT323', monospace;
   font-size: 12px;
   padding: 6px 14px;
   cursor: pointer;
@@ -303,7 +331,7 @@ body {
 
 .ctrl-label {
   color: #00aa00;
-  font-family: 'Courier New', monospace;
+  font-family: 'VT323', monospace;
   font-size: 11px;
 }
 
@@ -314,7 +342,7 @@ body {
 
 .status-bar {
   color: #00ff00;
-  font-family: 'Courier New', monospace;
+  font-family: 'VT323', monospace;
   font-size: 11px;
   margin-top: 6px;
   min-height: 16px;
